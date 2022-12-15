@@ -11,5 +11,5 @@ The keylogger uses the datetime module to generate timestamps for each key press
 Overall, the keylogger uses a combination of techniques and optimizations to capture key presses from the keyboard and write them to a log file in a efficient and stealthy manner.
 
 
-![alt text](images/output.png)
+![alt text](images/output.png)\
 Here is the output
