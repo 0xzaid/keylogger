@@ -12,3 +12,4 @@ Overall, the keylogger uses a combination of techniques and optimizations to cap
 
 
 ![alt text](images/output.png)
+Here is the output
