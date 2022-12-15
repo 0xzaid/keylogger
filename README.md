@@ -9,3 +9,6 @@ The keylogger also hides the log file by using the attrib command to set the "hi
 The keylogger uses the datetime module to generate timestamps for each key press, with the format YYYY-MM-DD HH:MM:SS. These timestamps are written to the log file along with the key press data, which can help with analyzing the captured data later.
 
 Overall, the keylogger uses a combination of techniques and optimizations to capture key presses from the keyboard and write them to a log file in a efficient and stealthy manner.
+
+
+![alt text](images/output.png)
