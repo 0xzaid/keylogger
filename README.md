@@ -1,20 +1,22 @@
 # Python Keylogger
-### Description
 
-The keylogger captures key presses from the keyboard and writes them to a log file, along with a timestamp for each key press.
+This is a simple keylogger written in Python. It uses the pynput library to capture key presses and writes them to a log file. The log file is saved with a randomly generated name and is hidden to prevent it from being easily discovered.
 
-The keylogger uses the pynput library to capture key presses from the keyboard, and the queue module to store the key press data in memory before writing it to the log file. This helps reduce the number of writes to the log file, which can improve the performance of the keylogger.
+## How it works
+The keylogger works by creating a keyboard listener using pynput.keyboard.Listener. This listener is configured to call a function, kl_on_press, whenever a key is pressed. The kl_on_press function converts the key press to a string and adds it to a queue.
 
-The keylogger also hides the log file by using the attrib command to set the "hidden" attribute for the file. This makes it difficult to locate the log file manually, which can help prevent the keylogger from being detected.
+A separate loop runs continuously, checking the size of the key queue and the time since the last write to the log file. If the queue reaches a certain size or a certain time interval has passed, the loop will write the key press data from the queue to the log file. The log file is opened in append mode and the key press data is written with a timestamp.
 
-The keylogger uses the datetime module to generate timestamps for each key press, with the format YYYY-MM-DD HH:MM:SS. These timestamps are written to the log file along with the key press data, which can help with analyzing the captured data later.
+## Usage
+To use the keylogger, simply run the script. It will start logging key presses until the script is stopped. The log file will be saved in the same directory as the script with a randomly generated name.
 
-Overall, the keylogger uses a combination of techniques and optimizations to capture key presses from the keyboard and write them to a log file in a efficient and stealthy manner.
+## Limitations
+This keylogger has a few limitations to be aware of. First, it only logs the keys that are pressed, not the keys that are released. This means that it will not capture key combinations such as Shift+A or Ctrl+C. Second, it only logs the keys as strings, so it will not capture special characters that are entered using the Alt or Ctrl keys. Finally, the log file is hidden, but it can still be discovered and read by someone with access to the file system.
 
-### Output
+## Output
 ![alt text](images/output.png)
 
-### TODO
+## TODO
 * add file sharing through SMTP, FTP, SFTP, HTTP, OR SSH
 * improve performance
 * increase stealth
