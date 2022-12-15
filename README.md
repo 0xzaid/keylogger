@@ -1,4 +1,5 @@
 # Python Keylogger
+### Description
 
 The keylogger captures key presses from the keyboard and writes them to a log file, along with a timestamp for each key press.
 
@@ -10,6 +11,12 @@ The keylogger uses the datetime module to generate timestamps for each key press
 
 Overall, the keylogger uses a combination of techniques and optimizations to capture key presses from the keyboard and write them to a log file in a efficient and stealthy manner.
 
-
+### Output
 ![alt text](images/output.png)\
-Here is the output
+
+### TODO
+* add file sharing through SMTP, FTP, SFTP, HTTP, OR SSH
+* improve performance
+* increase stealth
+* take screenshots?
+* detect what program the user typed in. e.g. Google Chrome
